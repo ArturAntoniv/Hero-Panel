@@ -1,0 +1,32 @@
+
+
+.app {
+    height: 100vh;
+    overflow-y: scroll;
+    background: url('../../assets/hero_bg.jpg') center / cover no-repeat;
+
+    @media (max-width: 768px) {
+        height: auto; // Висота авто на маленьких екранах
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 560px 440px;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 50px 20px 0 20px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; // Одно коло на маленьких екранах
+        padding-top: 20px; // Зменшити відступ
+    }
+
+    &__interactive {
+        padding-left: 40px;
+
+        @media (max-width: 768px) {
+            padding-left: 0; // Зняти відступ на маленьких екранах
+        }
+    }
+}
